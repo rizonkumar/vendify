@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap">
       <div>
-        <Button>I am an Button</Button>
+        <Button variant={"elevated"}>I am an Button</Button>
       </div>
       <div>
         <Input placeholder="I am an input" />
