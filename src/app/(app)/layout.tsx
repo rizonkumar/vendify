@@ -8,14 +8,12 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Vendify",
-  description: "",
+  description: "A blank template using Payload in a Next.js app.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={`${dmSans.className} antialiased`}>{children}</body>
