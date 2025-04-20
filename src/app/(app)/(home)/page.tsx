@@ -7,8 +7,16 @@ export default async function Home() {
   });
 
   const data = await payload.find({
-    collection: "users",
+    collection: "categories",
+    depth: 1, // Populate Subcategories
+    where: {
+      parent: {
+        exists: false,
+      },
+    },
   });
+
+  console.log("Data", data);
 
   return <div className="">{JSON.stringify(data, null, 2)}</div>;
 }
